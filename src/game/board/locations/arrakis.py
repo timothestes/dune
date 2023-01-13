@@ -6,7 +6,7 @@ def get_resources():
 
 @dataclass
 class Arrakis(Location):
-    name: str = "Arrakis"
+    name: str = "arrakis"
     location_type: str = "planet"
     resources: dict = field(default_factory=get_resources)
 

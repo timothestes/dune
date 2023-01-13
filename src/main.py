@@ -1,9 +1,9 @@
 from src.game.board.locations.arrakis import Arrakis
-from src.game.pieces.agent import Agent
+from game.pieces.agents.agent import Agent
 from src.game.board.board import Board
 
 if __name__ == "__main__":
-    
+
     # Create a new agent
     blue_agent = Agent("blue")
 
