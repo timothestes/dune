@@ -1,3 +1,11 @@
 {
-    "foo": "bar"
+    "locations": [
+        {
+            "name": "Arrakis",
+            "location_type": "planet",
+            "resources": {
+                "spice": 1
+            }
+        }
+    ]
 }

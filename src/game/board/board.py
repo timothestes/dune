@@ -1,14 +1,22 @@
 from src.game.board.locations.location import Location
 from game.pieces.agents.agent import Agent
 from typing import List
+import json
 
 
 class Board:
     def __init__(self):
         self.locations = {}
+        self.add_locations(self.get_locations())
+
+    def get_locations(self):
+        # TODO: test this
+        with open("resources/game_config.json", "r") as f:
+            config = json.load(f)
+            return [Location(**location) for location in config["locations"]]
 
     def add_location(self, location: Location):
-        self.locations[location.name] = None
+        self.locations[location.name] = location
 
     def add_locations(self, locations: List[Location]):
         for location in locations:
@@ -35,7 +43,6 @@ class Board:
         print(f"Moving {agent.color} {agent.name} to {location.name}.")
         # move agent to location
         self.locations[location.name] = agent
-        agent.current_position = location
         # collect resources
         location.location_effects()
         # set agent to activated
