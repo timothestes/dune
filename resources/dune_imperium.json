@@ -276,5 +276,333 @@
                 "emperor_influence": 1
             }
         }
+    ],
+    "combat_cards": [
+        {
+            "name_friendly": "Battle for Arrakeen",
+            "name": "battle_for_arrakeen",
+            "conflict_level": 3,
+            "rewards": {
+                "first": {
+                    "victory_points": 2,
+                    "control": "arrakeen"
+                },
+                "second": {
+                    "choose_two": [
+                        {
+                            "intrigue": 1
+                        },
+                        {
+                            "spice": 2
+                        },
+                        {
+                            "solari": 3
+                        }
+                    ]
+                },
+                "third": {
+                    "solari": 2,
+                    "intrigue": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Grand Vision",
+            "name": "grand_vision",
+            "conflict_level": 3,
+            "rewards": {
+                "first": {
+                    "influence": 2,
+                    "intrigue": 1
+                },
+                "second": {
+                    "intrigue": 1,
+                    "spice": 3
+                },
+                "third": {
+                    "spice": 3
+                }
+            }
+        },
+        {
+            "name_friendly": "Battle for Carthag",
+            "name": "battle_for_carthag",
+            "conflict_level": 3,
+            "rewards": {
+                "first": {
+                    "victory_points": 2,
+                    "control": "carthag"
+                },
+                "second": {
+                    "intrigue": 1,
+                    "spice": 3
+                },
+                "third": {
+                    "spice": 3
+                }
+            }
+        },
+        {
+            "name_friendly": "Sort Throught the Chaos",
+            "name": "sort_through_the_chaos",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "mentat": true,
+                    "intrigue": 1,
+                    "solari": 2
+                },
+                "second": {
+                    "intrigue": 1,
+                    "solari": 2
+                },
+                "third": {
+                    "solari": 2
+                }
+            }
+        },
+        {
+            "name_friendly": "Cloak and Dagger",
+            "name": "cloak_and_dagger",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "influence": 1,
+                    "intrigue": 2
+                },
+                "second": {
+                    "intrigue": 1,
+                    "spice": 1
+                },
+                "third": {
+                    "choose_one": [
+                        {
+                            "spice": 1
+                        },
+                        {
+                            "intrigue": 1
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_friendly": "Desert Power",
+            "name": "desert_power",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "victory_points": 1,
+                    "water": 1
+                },
+                "second": {
+                    "water": 1,
+                    "spice": 1
+                },
+                "third": {
+                    "spice": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Siege of Arraken",
+            "name": "siege_of_arraken",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "victory_points": 1,
+                    "control": "arrakeen"
+                },
+                "second": {
+                    "solari": 4
+                },
+                "third": {
+                    "solari": 2
+                }
+            }
+        },
+        {
+            "name_friendly": "Terrible Purpose",
+            "name": "terrible_purpose",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "victory_points": 1,
+                    "trash_cards": 1
+                },
+                "second": {
+                    "water": 1,
+                    "spice": 1
+                },
+                "third": {
+                    "spice": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Machinations",
+            "name": "machinations",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "choose_two": [
+                        {
+                            "emperor_influence": 1
+                        },
+                        {
+                            "spacing_guild_influence": 1
+                        },
+                        {
+                            "bene_gesserit_influence": 1
+                        },
+                        {
+                            "fremen_influence": 1
+                        }
+                    ]
+                },
+                "second": {
+                    "water": 1,
+                    "solari": 2
+                },
+                "third": {
+                    "water": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Battle for Imperial Basin",
+            "name": "battle_for_imperial_basin",
+            "conflict_level": 3,
+            "rewards": {
+                "first": {
+                    "victory_points": 2,
+                    "control": "imperial_basin"
+                },
+                "second": {
+                    "spice": 5
+                },
+                "third": {
+                    "spice": 3
+                }
+            }
+        },
+        {
+            "name_friendly": "Raid Stockpiles",
+            "name": "raid_stockpiles",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "intrigue": 1,
+                    "spice": 3
+                },
+                "second": {
+                    "spice": 2
+                },
+                "third": {
+                    "spice": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Siege of Carthag",
+            "name": "siege_of_carthag",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "victory_points": 1,
+                    "control": "carthag"
+                },
+                "second": {
+                    "intrigue": 1,
+                    "spice": 1
+                },
+                "third": {
+                    "spice": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Guild Bank Raid",
+            "name": "guild_bank_raid",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "solari": 6
+                },
+                "second": {
+                    "solari": 4
+                },
+                "third": {
+                    "solari": 2
+                }
+            }
+        },
+        {
+            "name_friendly": "Secure Imperial Basin",
+            "name": "secure_imperial_basin",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "victory_points": 1,
+                    "control": "imperial_basin"
+                },
+                "second": {
+                    "water": 2
+                },
+                "third": {
+                    "water": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Skirmish",
+            "name": "skirmish",
+            "conflict_level": 1,
+            "rewards": {
+                "first": {
+                    "victory_points": 1
+                },
+                "second": {
+                    "intrigue": 1,
+                    "solari": 2
+                },
+                "third": {
+                    "solari": 2
+                }
+            }
+        },
+        {
+            "name_friendly": "Skirmish",
+            "name": "skirmish",
+            "conflict_level": 1,
+            "rewards": {
+                "first": {
+                    "victory_points": 1
+                },
+                "second": {
+                    "water": 1
+                },
+                "third": {
+                    "spice": 1
+                }
+            }
+        },
+        {
+            "name_friendly": "Skirmish",
+            "name": "skirmish",
+            "conflict_level": 1,
+            "rewards": {
+                "first": {
+                    "influence": 1,
+                    "solari": 2
+                },
+                "second": {
+                    "solari": 3
+                },
+                "third": {
+                    "solari": 2
+                }
+            }
+        }
     ]
 }

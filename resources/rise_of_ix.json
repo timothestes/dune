@@ -49,5 +49,84 @@
             },
             "replaces": "hall_of_oratory"
         }
+    ],
+    "combat_cards": [
+        {
+            "name_friendly": "Economic Supremacy",
+            "name": "economic_supremacy",
+            "conflict_level": 3,
+            "rewards": {
+                "first": {
+                    "victory_points": 1,
+                    "economic_supremacy": true
+                },
+                "second": {
+                    "victory_points": 1
+                },
+                "third": {
+                    "solari": 2,
+                    "spice": 2
+                }
+            }
+        },
+        {
+            "name_friendly": "Trade Monopoly",
+            "name": "trade_monopoly",
+            "conflict_level": 2,
+            "rewards": {
+                "first": {
+                    "freighter_movement": 2,
+                    "troops": 1
+                },
+                "second": {
+                    "intrigue": 1,
+                    "water": 1
+                },
+                "third": {
+                    "choose_one": [
+                        {
+                            "water": 1
+                        },
+                        {
+                            "intrigue": 1
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name_friendly": "Skirmish",
+            "name": "skirmish",
+            "conflict_level": 1,
+            "rewards": {
+                "first": {
+                    "freighter_movement": 1,
+                    "spice": 1
+                },
+                "second": {
+                    "solari": 3
+                },
+                "third": {
+                    "solari": 2
+                }
+            }
+        },
+        {
+            "name_friendly": "Skirmish",
+            "name": "skirmish",
+            "conflict_level": 1,
+            "rewards": {
+                "first": {
+                    "freighter_movement": 1,
+                    "troops": 1
+                },
+                "second": {
+                    "spice": 2
+                },
+                "third": {
+                    "spice": 1
+                }
+            }
+        }
     ]
 }
