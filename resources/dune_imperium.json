@@ -1,0 +1,280 @@
+{
+    "locations": [
+        {
+            "friendly_name": "Arraken",
+            "name": "arraken",
+            "agent_icon": "City",
+            "combat_space": true,
+            "resources": {
+                "troops": 1,
+                "cards": 1
+            },
+            "controller_resources": {
+                "solari": 1
+            }
+        },
+        {
+            "friendly_name": "Carthag",
+            "name": "carthag",
+            "agent_icon": "City",
+            "combat_space": true,
+            "resources": {
+                "troops": 1,
+                "intrigue": 1
+            },
+            "controller_resources": {
+                "solari": 1
+            }
+        },
+        {
+            "friendly_name": "Conspire",
+            "name": "conspire",
+            "agent_icon": "Emperor",
+            "cost": {
+                "spice": 4
+            },
+            "resources": {
+                "solari": 5,
+                "troops": 2,
+                "intrigue": 1,
+                "emperor_influence": 1
+            }
+        },
+        {
+            "friendly_name": "Foldspace",
+            "name": "foldspace",
+            "agent_icon": "Spacing Guild",
+            "resources": {
+                "spacing_guild_influence": 1,
+                "foldspace_cards": 1
+            }
+        },
+        {
+            "friendly_name": "The Great Flat",
+            "name": "the_great_flat",
+            "agent_icon": "Spice Trade",
+            "combat_space": true,
+            "cost": {
+                "water": 2
+            },
+            "resources": {
+                "spice": 3,
+                "maker_bonus": true
+            }
+        },
+        {
+            "friendly_name": "Hagga Basin",
+            "name": "hagga_basin",
+            "agent_icon": "Spice Trade",
+            "cost": {
+                "water": 1
+            },
+            "resources": {
+                "spice": 2,
+                "maker_bonus": true
+            }
+        },
+        {
+            "friendly_name": "Hall of Oratory",
+            "name": "hall_of_oratory",
+            "agent_icon": "Landsraad",
+            "resources": {
+                "persuasion": 1,
+                "troops": 1
+            }
+        },
+        {
+            "friendly_name": "Hardy Warriors",
+            "name": "hardy_warriors",
+            "agent_icon": "Fremen",
+            "combat_space": true,
+            "cost": {
+                "water": 1
+            },
+            "resources": {
+                "fremen_influence": 1,
+                "troops": 2
+            }
+        },
+        {
+            "friendly_name": "Heighliner",
+            "name": "heighliner",
+            "combat_space": true,
+            "cost": {
+                "spice": 6
+            },
+            "resources": {
+                "troops": 5,
+                "water": 2,
+                "spacing_guild_influence": 1
+            }
+        },
+        {
+            "friendly_name": "High Council",
+            "name": "high_council",
+            "agent_icon": "Landsraad",
+            "cost": {
+                "solari": 5
+            }
+        },
+        {
+            "friendly_name": "Imperial Basin",
+            "name": "imperial_basin",
+            "agent_icon": "Spice Trade",
+            "combat_space": true,
+            "resources": {
+                "spice": 1,
+                "maker_bonus": true
+            }
+        },
+        {
+            "friendly_name": "Mentat",
+            "name": "mentat",
+            "agent_icon": "Landsraad",
+            "cost": {
+                "solari": 2
+            },
+            "resources": {
+                "mentat": true
+            }
+        },
+        {
+            "friendly_name": "Rally Troops",
+            "name": "rally_troops",
+            "agent_icon": "Landsraad",
+            "cost": {
+                "solari": 4
+            },
+            "resources": {
+                "troops": 4
+            }
+        },
+        {
+            "friendly_name": "Research Station",
+            "name": "research_station",
+            "agent_icon": "City",
+            "combat_space": true,
+            "cost": {
+                "water": 2
+            },
+            "resources": {
+                "cards": 3
+            }
+        },
+        {
+            "friendly_name": "Secrets",
+            "name": "secrets",
+            "agent_icon": "Bene Gesserit",
+            "resources": {
+                "bene_gesserit_influence": 1,
+                "intrigue": 1,
+                "pillage_intrigue": true
+            }
+        },
+        {
+            "friendly_name": "Secure Contract",
+            "name": "secure_contract",
+            "agent_icon": "Spice Trade",
+            "resources": {
+                "solari": 3
+            }
+        },
+        {
+            "friendly_name": "Selective Breeding",
+            "name": "selective_breeding",
+            "agent_icon": "Bene Gesserit",
+            "cost": {
+                "spice": 2
+            },
+            "resources": {
+                "bene_gesserit_influence": 1,
+                "trash_cards": 1,
+                "cards": 1
+            }
+        },
+        {
+            "friendly_name": "Sell Melange",
+            "name": "sell_melange",
+            "agent_icon": "Spice Trade",
+            "resources": {
+                "choose_one": [
+                    {
+                        "cost": {
+                            "spice": 2
+                        },
+                        "resources": {
+                            "solari": 6
+                        }
+                    },
+                    {
+                        "cost": {
+                            "spice": 3
+                        },
+                        "resources": {
+                            "solari": 8
+                        }
+                    },
+                    {
+                        "cost": {
+                            "spice": 4
+                        },
+                        "resources": {
+                            "solari": 10
+                        }
+                    },
+                    {
+                        "cost": {
+                            "spice": 5
+                        },
+                        "resources": {
+                            "solari": 12
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "friendly_name": "Sietch Tabr",
+            "name": "sietch_tabr",
+            "agent_icon": "City",
+            "combat_space": true,
+            "requirements": {
+                "fremen_influence": 2
+            },
+            "resources": {
+                "troops": 1,
+                "water": 1
+            }
+        },
+        {
+            "friendly_name": "Stillsuits",
+            "name": "stillsuits",
+            "agent_icon": "Fremen",
+            "combat_space": true,
+            "resources": {
+                "fremen_influence": 1,
+                "water": 1
+            }
+        },
+        {
+            "friendly_name": "Swordmaster",
+            "name": "swordmaster",
+            "agent_icon": "Landsraad",
+            "cost": {
+                "solari": 8
+            },
+            "resources": {
+                "swordmaster": true
+            }
+        },
+        {
+            "friendly_name": "Wealth",
+            "name": "wealth",
+            "agent_icon": "Emperor",
+            "resources": {
+                "solari": 2,
+                "emperor_influence": 1
+            }
+        }
+    ]
+}

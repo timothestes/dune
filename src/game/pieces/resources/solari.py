@@ -1,7 +1,7 @@
-from src.game.pieces.piece import Piece
+from src.game.pieces.resources.resource import Resource
 
 
-class Solari(Piece):
+class Solari(Resource):
     def __init__(self):
         super().__init__()
         self.name = "solari"

@@ -6,13 +6,3 @@ class Mentat(Agent):
         super().__init__()
         self.color = color
         self.name = "mentat"
-        self.activated = False
-
-    def is_activated(self):
-        return self.activated
-
-    def activate(self):
-        self.activated = True
-
-    def recall(self):
-        self.activated = False

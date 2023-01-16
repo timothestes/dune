@@ -1,7 +1,7 @@
 class Location:
-    def __init__(self, name, location_type, resources=None):
+    def __init__(self, name, agent_icon, resources=None):
         self.name = name
-        self.location_type = location_type
+        self.agent_icon = agent_icon
         self.resources = resources or {}
 
     def get_resources(self):

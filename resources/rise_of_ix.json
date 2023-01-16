@@ -1,0 +1,53 @@
+{
+    "locations": [
+        {
+            "name": "Dreadnought",
+            "agent_icon": "Landsraad",
+            "cost": {
+                "solari": 3
+            },
+            "resources": {
+                "dreadnought": 1,
+                "aquire_tech": true
+            },
+            "replaces": "recruit_troops"
+        },
+        {
+            "name": "Intersteller Shipping",
+            "agent_icon": "Spice Trade",
+            "requirements": {
+                "spacing_guild_influence": 2
+            },
+            "resources": {
+                "freighter_movement": 2
+            },
+            "replaces": "secure_contract"
+        },
+        {
+            "name": "Smuggling",
+            "agent_icon": "Spice Trade",
+            "resources": {
+                "solari": 1,
+                "freighter_movement": 1
+            },
+            "replaces": "sell_melange"
+        },
+        {
+            "name": "Tech Negotiation",
+            "agent_icon": "Landsraad",
+            "resources": {
+                "persuasion": 1,
+                "choose_one": [
+                    {
+                        "aquire_tech": true,
+                        "spice_discount": 1
+                    },
+                    {
+                        "send_negotiator": true
+                    }
+                ]
+            },
+            "replaces": "hall_of_oratory"
+        }
+    ]
+}

@@ -26,7 +26,7 @@ class Game:
 
     def get_winner(self):
         # find the player with the most points
-        winner = player[0]
+        winner = self.players[0]
         for player in self.players:
             if player.points > winner.points:
                 winner = player

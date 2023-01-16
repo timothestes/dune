@@ -5,13 +5,18 @@ import json
 
 
 class Board:
-    def __init__(self):
+    def __init__(self, type: str = "default"):
         self.locations = {}
-        self.add_locations(self.get_locations())
+        self.add_locations(self.get_locations(type))
 
-    def get_locations(self):
-        # TODO: test this
-        with open("resources/game_config.json", "r") as f:
+    def get_locations(self, type):
+        if type == "default":
+            return self.get_default_locations()
+        else:
+            raise ValueError(f"{type} is not a valid board type (yet).")
+
+    def get_default_locations(self):
+        with open("resources/dune_imperium.json", "r") as f:
             config = json.load(f)
             return [Location(**location) for location in config["locations"]]
 

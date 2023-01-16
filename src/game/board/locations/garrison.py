@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 class Garrison(Location):
     color: str
     name: str = "garrison"
-    location_type: str = "garrison"
+    agent_icon: str = "garrison"
     resources: dict = field(default_factory=dict)
     n_troops_in_garrison: int = 0
     n_troops_in_battle: int = 0
