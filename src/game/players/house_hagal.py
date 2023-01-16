@@ -6,6 +6,6 @@ class HouseHagalPlayer(Player):
     def __init__(self, color: str, player_id: int = None):
         super().__init__(color, player_id)
 
-    def get_starting_resources(self):
+    def _get_starting_resources(self):
         starting_resources = {"water": 1, "spice": 0, "solari": 0}
         return ResourceManager(self.color, **starting_resources)

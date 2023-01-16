@@ -10,14 +10,14 @@ class Player:
         self.hand = []
         self.points = 0
         self.color = color
-        self.resources = self.get_starting_resources()
-        self.influence = self.get_starting_influence()
+        self.resources = self._get_starting_resources()
+        self.influence = self._get_starting_influence()
 
-    def get_starting_resources(self):
+    def _get_starting_resources(self):
         starting_resources = {"water": 1, "spice": 0, "solari": 0}
         return ResourceManager(**starting_resources)
 
-    def get_starting_influence(self):
+    def _get_starting_influence(self):
         starting_influence = {
             "emperor": 0,
             "spacing_guild": 0,
