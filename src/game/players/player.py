@@ -15,7 +15,7 @@ class Player:
 
     def get_starting_resources(self):
         starting_resources = {"water": 1, "spice": 0, "solari": 0}
-        return ResourceManager(self.color, **starting_resources)
+        return ResourceManager(**starting_resources)
 
     def get_starting_influence(self):
         starting_influence = {
@@ -26,9 +26,17 @@ class Player:
         }
         return InfluenceManager(**starting_influence)
 
+    def __str__(self):
+        return (
+            f"Player {self.player_id} ({self.color}): \n "
+            f"Resources: {self.resources} \n "
+            f"Influence: {self.influence}"
+        )
+
 
 if __name__ == "__main__":
     player = Player("Yellow", 1)
+
+    player.influence.add("fremen", 1)
+    player.resources.add("water", 1)
     print(player)
-    print(player.resources)
-    print(player.influence.fremen)

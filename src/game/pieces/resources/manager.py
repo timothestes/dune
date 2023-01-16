@@ -4,53 +4,41 @@ from src.game.pieces.resources.resource import Resource
 class ResourceManager:
     def __init__(
         self,
-        color: str,
         water: int = 0,
         spice: int = 0,
         solari: int = 0,
         intruige: int = 0,
     ):
-        self.color = color
         self.water = water
         self.spice = spice
         self.solari = solari
         self.intruige = intruige
 
-    def is_water(self, resource: Resource or str):
-        return resource.name == "water" or resource == "water"
+    def _should_add(self, resource_name: str) -> bool:
+        """Should we add an resource to the given resource type?"""
+        return hasattr(self, resource_name)
 
-    def is_spice(self, resource: Resource or str):
-        return resource.name == "spice" or resource == "spice"
+    def _increment(self, resource_name: str, amount: int) -> None:
+        setattr(self, resource_name, getattr(self, resource_name) + amount)
 
-    def is_solari(self, resource: Resource or str):
-        return resource.name == "solari" or resource == "solari"
+    def _decrement(self, resource_name: str, amount: int) -> None:
+        setattr(self, resource_name, getattr(self, resource_name) - amount)
 
-    def is_intruige(self, resource: Resource or str):
-        return resource.name == "intruige" or resource == "intruige"
+    def _should_remove(self, resource_name: str) -> bool:
+        """Should we remove an resource from the given resource type?"""
+        return hasattr(self, resource_name) and getattr(self, resource_name) > 0
 
-    def add_resource(self, resource: Resource or str):
-        if self.is_water(resource):
-            self.water += 1
-        elif self.is_spice(resource):
-            self.spice += 1
-        elif self.is_solari(resource):
-            self.solari += 1
-        elif self.is_intruige(resource):
-            self.intruige += 1
+    def add(self, resource: Resource or str, amount: int):
+        resource_name = resource.name if isinstance(resource, Resource) else resource
+        if self._should_add(resource_name):
+            self._increment(resource, amount)
         else:
             raise ValueError("Invalid resource")
 
-    def remove_resource(self, resource: Resource or str):
-        if self.is_water(resource) and self.water > 0:
-            self.water -= 1
-        elif self.is_spice(resource) and self.spice > 0:
-            self.spice -= 1
-        elif self.is_solari(resource) and self.solari > 0:
-            self.solari -= 1
-        elif self.is_intruige(resource) and self.intruige > 0:
-            self.intruige -= 1
-        else:
-            raise ValueError("Invalid resource or not enough resources")
+    def remove(self, resource: Resource or str):
+        resource_name = resource.name if isinstance(resource, Resource) else resource
+        if self._should_remove(resource_name):
+            self._decrement(resource)
 
     def __str__(self):
         return (
