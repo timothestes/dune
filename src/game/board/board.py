@@ -1,7 +1,8 @@
-from src.game.board.locations.location import Location
-from game.pieces.agents.agent import Agent
-from typing import List
 import json
+from typing import List
+
+from game.pieces.agents.agent import Agent
+from src.game.board.locations.location import Location
 
 
 class Board:
