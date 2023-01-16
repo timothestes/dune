@@ -12,13 +12,29 @@ class Board:
     def get_locations(self, type):
         if type == "default":
             return self.get_default_locations()
+        elif type == "rise_of_ix":
+            return self.get_rise_of_ix_locations()
         else:
             raise ValueError(f"{type} is not a valid board type (yet).")
 
-    def get_default_locations(self):
+    def get_default_locations(self) -> List[Location]:
         with open("resources/dune_imperium.json", "r") as f:
             config = json.load(f)
             return [Location(**location) for location in config["locations"]]
+
+    def get_default_locations_as_dict(self) -> dict:
+        return {location.name: location for location in self.get_default_locations()}
+
+    def get_rise_of_ix_locations(self):
+        locations = self.get_default_locations_as_dict()
+        with open("resources/rise_of_ix.json", "r") as f:
+            config = json.load(f)
+            for location in config["locations"]:
+                if location.get("replaces"):
+                    locations.pop(location["replaces"], None)
+                locations[location["name"]] = Location(**location)
+
+            return list(locations.values())
 
     def add_location(self, location: Location):
         self.locations[location.name] = location
