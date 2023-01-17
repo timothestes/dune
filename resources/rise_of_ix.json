@@ -128,5 +128,65 @@
                 }
             }
         }
+    ],
+    "house_hagal_cards": [
+        {
+            "name": "dreadnought",
+            "name_friendly": "Dreadnought",
+            "location": "dreadnought",
+            "two_player_only": true,
+            "combat_value": 3,
+            "resources": {
+                "troops": 1,
+                "dreadnought": 1
+            },
+            "quantity_in_deck": 4
+        },
+        {
+            "name": "smuggling_or_interstaller_shipping",
+            "name_friendly": "Smuggling Or Intersteller Shipping",
+            "location": [
+                "smuggling",
+                "intersteller_shipping"
+            ],
+            "combat_vallue": 2,
+            "resources": {
+                "smuggling": {
+                    "freighter_movement": 1
+                },
+                "intersteller_shipping": {
+                    "freighter_movement": 2
+                }
+            },
+            "quantity_in_deck": 2
+        },
+        {
+            "name": "intersteller_shipping",
+            "name_friendly": "Intersteller Shipping",
+            "location": "intersteller_shipping",
+            "combat_vallue": 3,
+            "resources": {
+                "freighter_movement": 2,
+                "minimum_spacing_guild_influence": 2
+            }
+        },
+        {
+            "name": "tech_negotiation",
+            "name_friendly": "Tech Negotiation",
+            "location": "tech_negotiation",
+            "combat_value": 0,
+            "resources": {
+                "choose_one": [
+                    {
+                        "aquire_tech": true,
+                        "spice_discount": 1
+                    },
+                    {
+                        "send_negotiator": true
+                    }
+                ]
+            },
+            "quantity_in_deck": 2
+        }
     ]
 }

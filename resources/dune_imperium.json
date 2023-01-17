@@ -604,5 +604,166 @@
                 }
             }
         }
+    ],
+    "house_hagal_cards": [
+        {
+            "name_friendly": "Rally Troops",
+            "name": "rally_troops",
+            "location": "rally_troops",
+            "combat_value": 3,
+            "resources": {
+                "troops": 4
+            },
+            "quantity_in_deck": 2
+        },
+        {
+            "name_friendly": "Hall of Oratory",
+            "name": "hall_of_oratory",
+            "location": "hall_of_oratory",
+            "combat_value": 0,
+            "resources": {
+                "troops": 1
+            },
+            "quantity_in_deck": 2
+        },
+        {
+            "name_friendly": "Carthag",
+            "name": "carthag",
+            "location": "carthag",
+            "combat_value": 0,
+            "combat_space": true,
+            "resources": {
+                "troops": 1
+            },
+            "quantity_in_deck": 3
+        },
+        {
+            "name_friendly": "Harvest Spice",
+            "name": "harvest_spice",
+            "location": "Spice Trade",
+            "combat_value": 2,
+            "resources": {
+                "harvest_spice": true
+            }
+        },
+        {
+            "name_friendly": "Arrakeen",
+            "name": "arrakeen",
+            "location": "arrakeen",
+            "combat_value": 1,
+            "combat_space": true,
+            "resources": {
+                "troops": 1,
+                "signet_ring": true
+            },
+            "quantity_in_deck": 3,
+            "single_player_only": true
+        },
+        {
+            "name": "heighliner",
+            "name_friendly": "Heighliner",
+            "location": "heighliner",
+            "combat_value": 6,
+            "combat_space": true,
+            "resources": {
+                "troops": 3,
+                "spacing_guild_influence": 1
+            },
+            "quantity_in_deck": 1
+        },
+        {
+            "name": "foldspace",
+            "name_friendly": "Foldspace",
+            "location": "foldspace",
+            "combat_value": 1,
+            "resources": {
+                "spacing_guild_influence": 1
+            },
+            "quantity_in_deck": 2
+        },
+        {
+            "name": "selective_breeding",
+            "name_friendly": "Selective Breeding",
+            "location": "selective_breeding",
+            "combat_value": 2,
+            "resources": {
+                "bene_gesserit_influence": 1
+            },
+            "quantity_in_deck": 2
+        },
+        {
+            "name": "secrets",
+            "name_friendly": "Secrets",
+            "location": "secrets",
+            "combat_value": 1,
+            "resources": {
+                "bene_gesserit_influence": 1
+            },
+            "quantity_in_deck": 1
+        },
+        {
+            "name": "wealth",
+            "name_friendly": "Wealth",
+            "location": "wealth",
+            "combat_value": 3,
+            "resources": {
+                "emperor_influence": 1
+            },
+            "quantity_in_deck": 1
+        },
+        {
+            "name": "conspire",
+            "name_friendly": "Conspire",
+            "location": "conspire",
+            "combat_value": 4,
+            "resources": {
+                "emperor_influence": 1,
+                "troops": 2
+            },
+            "quantity_in_deck": 2
+        },
+        {
+            "name": "hardy_warriors",
+            "name_friendly": "Hardy Warriors",
+            "location": "hardy_warriors",
+            "combat_value": 5,
+            "resources": {
+                "troops": 2,
+                "fremen_influence": 1
+            },
+            "quantity_in_deck": 1,
+            "combat_space": true
+        },
+        {
+            "name": "stillsuits",
+            "name_friendly": "Stillsuits",
+            "location": "stillsuits",
+            "combat_value": 4,
+            "resources": {
+                "fremen_influence": 1
+            },
+            "quantity_in_deck": 2,
+            "combat_space": true
+        },
+        {
+            "name": "reshuffle",
+            "name_friendly": "Reshuffle",
+            "location": null,
+            "combat_value": 0,
+            "quantity_in_deck": 1,
+            "two_player_only": true
+        },
+        {
+            "name": "arraken",
+            "name_friendly": "Arraken",
+            "location": "arraken",
+            "combat_value": 1,
+            "resources": {
+                "troops": 1
+            },
+            "quantity_in_deck": 3,
+            "combat_space": true,
+            "two_player_only": true
+        }
     ]
 }
