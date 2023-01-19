@@ -66,7 +66,10 @@ class Game:
         Return a list of human players.
         """
         return [
-            HumanPlayer(color=self.colors[i], player_id=i)
+            HumanPlayer(
+                color=self.colors[i],
+                player_id=i,
+            )
             for i in range(n_human_players)
         ]
 

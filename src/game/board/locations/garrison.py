@@ -44,3 +44,10 @@ class Garrison(Location):
                 f"No troops in {self.color} garrison to recall from battle!"
             )
         self.n_troops_in_battle -= 1
+
+    def __str__(self) -> str:
+        return (
+            f"{self.n_troops_in_garrison} troops in garrison, "
+            f"{self.n_troops_in_battle} troops in battle, "
+            f"{self.n_troops_in_supply} troops in supply."
+        )
