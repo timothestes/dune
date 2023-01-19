@@ -3,13 +3,20 @@ import uuid
 from src.game.pieces.resources.manager import ResourceManager
 from src.game.players.influence_manager import InfluenceManager
 from src.game.board.locations.garrison import Garrison
+from src.game.leaders.leader import Leader
 
 
 class Player:
-    def __init__(self, color: str, player_id: int = None):
+    def __init__(
+        self,
+        color: str,
+        leader: Leader,
+        player_id: int = None,
+    ):
         self.player_id = player_id
         if player_id is None:
             self.player_id = uuid.uuid4()
+        self.leader = leader
         self.hand = []
         self.points = 0
         self.color = color

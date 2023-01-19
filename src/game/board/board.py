@@ -1,21 +1,23 @@
-from src.game.board.locations.location import Location
-from src.game.pieces.agents.agent import Agent
 import json
 from typing import List
 
+from src.game.board.locations.location import Location
+from src.game.pieces.agents.agent import Agent
+
 
 class Board:
-    def __init__(self, type: str = "default"):
+    def __init__(self, board_type: str = "base"):
         self.locations = {}
-        self._add_locations(self.get_locations(type))
+        self.board_type = board_type
+        self._add_locations(self._get_locations(board_type))
 
-    def get_locations(self, type):
-        if type == "default":
+    def _get_locations(self, board_type: str):
+        if board_type == "base":
             return self._get_default_locations()
-        elif type == "rise_of_ix":
+        elif board_type == "rise_of_ix":
             return self._get_rise_of_ix_locations()
         else:
-            raise ValueError(f"{type} is not a valid board type (yet).")
+            raise ValueError(f"{board_type} is not a valid board type (yet).")
 
     def _get_default_locations(self) -> List[Location]:
         with open("resources/dune_imperium.json", "r") as f:

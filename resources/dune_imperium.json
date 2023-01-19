@@ -766,5 +766,11 @@
             "combat_space": true,
             "two_player_only": true
         }
+    ],
+    "leaders": [
+        {
+            "name": "gurney_halleck",
+            "house_hagal_playable": true
+        }
     ]
 }

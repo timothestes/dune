@@ -188,5 +188,10 @@
             },
             "quantity_in_deck": 2
         }
+    ],
+    "leaders": [
+        {
+            "name": "blah blah"
+        }
     ]
 }
