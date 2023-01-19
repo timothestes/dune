@@ -1,6 +1,9 @@
+from typing import List
+
 from src.game.board.board import Board
 from src.game.players.house_hagal import HouseHagalPlayer
 from src.game.players.human import HumanPlayer
+from src.game.players.player import Player
 
 
 class Game:
@@ -15,6 +18,7 @@ class Game:
         self.n_human_players = n_human_players
         self.n_house_hagal_players = n_house_hagal_players
         self.state = "initializing"
+        self.players: List[Player] = []
         self._initialize_game()
 
     def _check_players(self, n_human_players: int, n_house_hagal_players: int):
