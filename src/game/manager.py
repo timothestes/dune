@@ -4,22 +4,28 @@ from src.game.players.human import HumanPlayer
 
 
 class Game:
+    """
+    A class representing a game.
+    """
+
     def __init__(self, n_human_players: int, n_house_hagal_players: int = 0):
+        """Initialize the game with the number of human and house_hagal players."""
         self._check_players(n_human_players, n_house_hagal_players)
         self.colors = ["red", "blue", "green", "yellow"]
         self.n_human_players = n_human_players
         self.n_house_hagal_players = n_house_hagal_players
         self.state = "initializing"
-        self.initialize_game()
+        self._initialize_game()
 
     def _check_players(self, n_human_players: int, n_house_hagal_players: int):
+        """Check if the number of players is between 2 and 4."""
         if n_human_players + n_house_hagal_players > 4:
             raise ValueError("Too many players. Max 4 players allowed.")
 
         if n_human_players + n_house_hagal_players < 2:
             raise ValueError("Too few players. Min 2 players allowed.")
 
-    def initialize_game(self):
+    def _initialize_game(self):
         self.players = self._get_players(
             n_human_players=self.n_human_players,
             n_house_hagal_players=self.n_house_hagal_players,

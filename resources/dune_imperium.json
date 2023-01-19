@@ -99,6 +99,7 @@
         {
             "friendly_name": "Heighliner",
             "name": "heighliner",
+            "agent_icon": "Spacing Guild",
             "combat_space": true,
             "cost": {
                 "spice": 6

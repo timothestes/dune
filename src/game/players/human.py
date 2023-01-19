@@ -9,4 +9,4 @@ class HumanPlayer(Player):
 
     def _get_starting_resources(self):
         starting_resources = {"water": 1, "spice": 0, "solari": 0}
-        return ResourceManager(self.color, **starting_resources)
+        return ResourceManager(**starting_resources)
