@@ -25,6 +25,7 @@ class Game:
         self.difficulty = difficulty
         self.board_type = board_type
         self._check_players(n_human_players, n_house_hagal_players)
+        self._check_difficulty(difficulty)
         self.colors = ["red", "blue", "green", "yellow"]
         self.n_human_players = n_human_players
         self.n_house_hagal_players = n_house_hagal_players
@@ -32,6 +33,13 @@ class Game:
         self.players: List[Player] = []
         self.first_player = None
         self._initialize_game()
+
+    def _check_difficulty(self, difficulty: str):
+        """
+        Check if the difficulty is valid.
+        """
+        if difficulty not in ["novice", "veteran", "expert"]:
+            raise ValueError("Invalid difficulty.")
 
     def _check_players(self, n_human_players: int, n_house_hagal_players: int):
         """
