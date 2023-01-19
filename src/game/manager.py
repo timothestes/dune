@@ -29,19 +29,21 @@ class Game:
         self.colors = ["red", "blue", "green", "yellow"]
         self.n_human_players = n_human_players
         self.n_house_hagal_players = n_house_hagal_players
-        self.state = "initializing"
         self.players: List[Player] = []
         self.first_player = None
+        self.state = "initializing"
         self._initialize_game()
 
-    def _check_difficulty(self, difficulty: str):
+    def _check_difficulty(self, difficulty: str) -> None:
         """
         Check if the difficulty is valid.
         """
         if difficulty not in ["novice", "veteran", "expert"]:
             raise ValueError("Invalid difficulty.")
 
-    def _check_players(self, n_human_players: int, n_house_hagal_players: int):
+    def _check_players(
+        self, n_human_players: int, n_house_hagal_players: int
+    ) -> None:
         """
         Check if the number of players is between 2 and 4.
         """
@@ -51,7 +53,7 @@ class Game:
         if n_human_players + n_house_hagal_players < 2:
             raise ValueError("Too few players. Min 2 players allowed.")
 
-    def _initialize_game(self):
+    def _initialize_game(self) -> None:
         """
         Initialize the game state, players and board.
         """
@@ -69,13 +71,15 @@ class Game:
         """
         Board(board_type=self.board_type)
 
-    def stop_game(self):
+    def stop_game(self) -> None:
         """
         Stop the game.
         """
         self.state = "stopped"
 
-    def _get_players(self, n_human_players: int, n_house_hagal_players: int):
+    def _get_players(
+        self, n_human_players: int, n_house_hagal_players: int
+    ) -> List[Player]:
         """
         Return a list of all players in the game.
         """
@@ -102,7 +106,7 @@ class Game:
 
     def _update_playable_leaders(
         self, playable_leaders: List[Leader], players: List[Player]
-    ):
+    ) -> List[Leader]:
         return [
             leader
             for leader in playable_leaders
@@ -142,7 +146,7 @@ class Game:
 
     def _get_human_players(
         self, n_human_players: int, playable_leaders: list[Leader]
-    ) -> list:
+    ) -> List[HumanPlayer]:
         """
         Return a list of human players, with randomly chosen leaders.
         """
@@ -161,7 +165,7 @@ class Game:
         n_human_players: int,
         n_house_hagal_players: int,
         playable_leaders: List[Leader],
-    ) -> list:
+    ) -> List[HouseHagalPlayer]:
         """
         Return a list of house_hagal players, with randomly chosen leaders.
         """
@@ -175,7 +179,7 @@ class Game:
             for i in range(n_house_hagal_players)
         ]
 
-    def get_winner(self):
+    def get_winner(self) -> Player:
         """
         Return the player with the most points.
         """
@@ -186,7 +190,7 @@ class Game:
 
         return winner
 
-    def _decide_first_player(self):
+    def _decide_first_player(self) -> None:
         """
         Decide which player starts the game, randomly.
         """
