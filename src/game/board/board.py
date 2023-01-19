@@ -1,8 +1,7 @@
+from src.game.board.locations.location import Location
+from src.game.pieces.agents.agent import Agent
 import json
 from typing import List
-
-from game.pieces.agents.agent import Agent
-from src.game.board.locations.location import Location
 
 
 class Board:
@@ -24,7 +23,10 @@ class Board:
             return [Location(**location) for location in config["locations"]]
 
     def _get_default_locations_as_dict(self) -> dict:
-        return {location.name: location for location in self._get_default_locations()}
+        return {
+            location.name: location
+            for location in self._get_default_locations()
+        }
 
     def _get_rise_of_ix_locations(self) -> List[Location]:
         locations = self._get_default_locations_as_dict()
