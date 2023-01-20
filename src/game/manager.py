@@ -21,7 +21,9 @@ class Game:
         difficulty: str = "novice",
         board_type: str = "base",
     ):
-        """Initialize the game with the number of human and house_hagal players."""
+        """
+        Initialize the game with the number of human and house_hagal players.
+        """
         self.difficulty = difficulty
         self.board_type = board_type
         self._check_players(n_human_players, n_house_hagal_players)

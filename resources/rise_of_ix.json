@@ -191,7 +191,57 @@
     ],
     "leaders": [
         {
-            "name": "blah blah"
+            "name_friendly": "Viscount Hundro Moritani",
+            "name": "viscount_hundro_moritani",
+            "faction": "house_moritani",
+            "faction_friendly": "House Moritani",
+            "signet_ring_ability": "viscount_hundro_moritani_signet",
+            "passive_ability": "viscount_hundro_moritani_passive",
+            "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Tessia Vernius",
+            "name": "tessia_vernius",
+            "faction": "house_vernius",
+            "faction_friendly": "House Vernius",
+            "signet_ring_ability": "tessia_vernius_signet",
+            "passive_ability": "tessia_vernius_passive",
+            "house_hagal_playable": false
+        },
+        {
+            "name_friendly": "\"Princess\" Yuna Moritani",
+            "name": "princess_yuna_moritani",
+            "faction": "house_moritani",
+            "faction_friendly": "House Moritani",
+            "signet_ring_ability": "princess_yuna_moritani_signet",
+            "passive_ability": "princess_yuna_moritani_passive",
+            "house_hagal_playable": false
+        },
+        {
+            "name_friendly": "Archduke Armand Ecaz",
+            "name": "archduke_armand_ecaz",
+            "faction": "house_ecaz",
+            "faction_friendly": "House Ecaz",
+            "signet_ring_ability": "archduke_armand_ecaz_signet",
+            "passive_ability": "archduke_armand_ecaz_passive",
+            "house_hagal_playable": false
+        },
+        {
+            "name_friendly": "Ilesa Ecaz",
+            "name": "ilesa_ecaz",
+            "faction": "house_ecaz",
+            "faction_friendly": "House Ecaz",
+            "signet_ring_ability": "ilesa_ecaz_signet",
+            "passive_ability": "ilesa_ecaz_passive",
+            "house_hagal_playable": false
+        },
+        {
+            "name_friendly": "Prince Rhombur Vernius",
+            "name": "prince_rhombur_vernius",
+            "faction": "house_vernius",
+            "faction_friendly": "House Vernius",
+            "signet_ring_ability": "prince_rhombur_vernius_signet",
+            "passive_ability": "prince_rhombur_vernius_passive"
         }
     ]
 }

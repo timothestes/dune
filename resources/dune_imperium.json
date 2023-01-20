@@ -769,8 +769,84 @@
     ],
     "leaders": [
         {
-            "name": "gurney_halleck",
+            "name_friendly": "Duke Leto Atreides",
+            "name": "duke_leto_atreides",
+            "faction": "house_atreides",
+            "faction_friendly": "House Atreides",
+            "signet_ring_ability": "duke_leto_atreides_signet",
+            "passive_ability": "duke_leto_atreides_passive",
             "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Paul Atreides",
+            "name": "paul_atreides",
+            "faction": "house_atreides",
+            "faction_friendly": "House Atreides",
+            "signet_ring_ability": {
+                "cards": 1
+            },
+            "passive_ability": "paul_atreides_passive",
+            "house_hagal_playable": false
+        },
+        {
+            "name_friendly": "Countess Ariana Thorvald",
+            "name": "countess_ariana_thorvald",
+            "faction": "house_thorvald",
+            "faction_friendly": "House Thorvald",
+            "signet_ring_ability": {
+                "water": 1
+            },
+            "passive_ability": "countess_ariana_thorvald_passive",
+            "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Earl Memnon Thorvald",
+            "name": "earl_memnon_thorvald",
+            "faction": "house_thorvald",
+            "faction_friendly": "House Thorvald",
+            "signet_ring_ability": {
+                "spice": 1
+            },
+            "passive_ability": "earl_memnon_thorvald_passive",
+            "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Glossu \"The Beast\" Rabban",
+            "name": "glossu_the_beast_rabban",
+            "faction": "house_harkonnen",
+            "faction_friendly": "House Harkonnen",
+            "signet_ring_ability": "glossu_the_beast_rabban_signet",
+            "passive_ability": "glossu_the_beast_rabban_passive",
+            "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Count Ilban Richese",
+            "name": "count_ilban_richese",
+            "faction": "house_richese",
+            "faction_friendly": "House Richese",
+            "signet_ring_ability": {
+                "solari": 1
+            },
+            "passive_ability": "count_ilban_richese_passive",
+            "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Baron Vladimir Harkonnen",
+            "name": "baron_vladimir_harkonnen",
+            "faction": "house_harkonnen",
+            "faction_friendly": "House Harkonnen",
+            "signet_ring_ability": "baron_vladimir_harkonnen_signet",
+            "passive_ability": "baron_vladimir_harkonnen_passive",
+            "house_hagal_playable": true
+        },
+        {
+            "name_friendly": "Helena Richese",
+            "name": "helena_richese",
+            "faction": "house_richese",
+            "faction_friendly": "House Richese",
+            "signet_ring_ability": "helena_richese_signet",
+            "passive_ability": "helena_richese_passive",
+            "house_hagal_playable": false
         }
     ]
 }
