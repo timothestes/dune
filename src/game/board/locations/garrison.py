@@ -45,6 +45,10 @@ class Garrison(Location):
             )
         self.n_troops_in_battle -= 1
 
+    def remove_all_troops_from_battle(self) -> None:
+        self.n_troops_in_garrison += self.n_troops_in_battle
+        self.n_troops_in_battle = 0
+
     def __str__(self) -> str:
         return (
             f"{self.n_troops_in_garrison} troops in garrison, "

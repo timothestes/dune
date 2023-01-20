@@ -54,3 +54,15 @@ class Player:
             f"Points: {self.points} \n  "
             f"Garrison: {self.garrison} \n  "
         )
+
+    def draw_new_hand(self):
+        return
+
+    def take_turn(self):
+        return
+
+    def get_combat_points(self) -> int:
+        return 0
+
+    def play_combat_cards(self):
+        return "TODO"

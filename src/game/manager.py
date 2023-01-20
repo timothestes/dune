@@ -7,6 +7,7 @@ from src.game.leaders.leader import Leader
 from src.game.players.house_hagal import HouseHagalPlayer
 from src.game.players.human import HumanPlayer
 from src.game.players.player import Player
+from src.game.rounds.round_manager import RoundManager
 
 
 class Game:
@@ -34,8 +35,49 @@ class Game:
         self.turns_until_swordmaster = self._get_turns_until_swordmaster()
         self.players: List[Player] = []
         self.first_player = None
-        self.state = "initializing"
-        self._initialize_game()
+        self.players = self._get_players(
+            n_human_players=self.n_human_players,
+            n_house_hagal_players=self.n_house_hagal_players,
+        )
+        self.board = self._get_board()
+        self.state = "started"
+        self.turn_order = self._get_turn_order()
+        self.first_player = self.turn_order[0]
+
+    def start_round(self) -> None:
+        """
+        Start a new round.
+        """
+        self._round = RoundManager(
+            board=self.board,
+            first_player=self.first_player,
+            turn_order=self.turn_order,
+        )
+        self._round.start_round()
+        self._round.take_player_turns()
+        self._round.resolve_combat()
+        self._round.update_makers()
+        self._round.recall_phase()
+        self.first_player = self._get_next_first_player(
+            current_first_player=self.first_player
+        )
+
+    def _get_next_first_player(self, current_first_player: Player) -> Player:
+        """Get the next first player in the turn order."""
+        if (
+            self.turn_order.index(current_first_player)
+            == len(self.turn_order) - 1
+        ):
+            return self.turn_order[0]
+        return self.turn_order[self.turn_order.index(current_first_player) + 1]
+
+    def _get_turn_order(self) -> List[Player]:
+        """
+        Return the turn order.
+        """
+        turn_order = self.players
+        random.shuffle(turn_order)
+        return turn_order
 
     def _check_difficulty(self, difficulty: str) -> None:
         """
@@ -55,18 +97,6 @@ class Game:
 
         if n_human_players + n_house_hagal_players < 2:
             raise ValueError("Too few players. Min 2 players allowed.")
-
-    def _initialize_game(self) -> None:
-        """
-        Initialize the game state, players and board.
-        """
-        self.players = self._get_players(
-            n_human_players=self.n_human_players,
-            n_house_hagal_players=self.n_house_hagal_players,
-        )
-        self.first_player = self._decide_first_player()
-        self.board = self._get_board()
-        self.state = "started"
 
     def _get_board(self) -> Board:
         """
@@ -202,8 +232,8 @@ class Game:
 
         return winner
 
-    def _decide_first_player(self) -> None:
+    def select_random_player(self) -> Player:
         """
-        Decide which player starts the game, randomly.
+        Return a random player.
         """
-        self.first_player = random.choice(self.players)
+        return random.choice(self.players)

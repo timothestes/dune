@@ -81,3 +81,6 @@ class Board:
                 agent: Agent = self.locations[location]
                 agent.recall()
                 self.locations[location] = None
+
+    def update_makers(self) -> None:
+        return "TODO"

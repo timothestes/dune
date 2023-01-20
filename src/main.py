@@ -10,5 +10,10 @@ if __name__ == "__main__":
         difficulty="novice",
     )
 
-    for player in game.players:
-        print(player)
+    print(game.first_player.color)
+    game.start_round()
+    print(game.first_player.color)
+    game.start_round()
+    print(game.first_player.color)
+    game.start_round()
+    print(game.first_player.color)

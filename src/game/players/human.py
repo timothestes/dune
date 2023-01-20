@@ -10,3 +10,9 @@ class HumanPlayer(Player):
     def _get_starting_resources(self):
         starting_resources = {"water": 1, "spice": 0, "solari": 0}
         return ResourceManager(**starting_resources)
+
+    def draw_new_hand(self):
+        return "TODO"
+
+    def take_turn(self):
+        return "TODO"

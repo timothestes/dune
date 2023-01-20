@@ -11,3 +11,12 @@ class HouseHagalPlayer(Player):
     def _get_starting_resources(self):
         starting_resources = {"water": 1, "spice": 0, "solari": 0}
         return ResourceManager(**starting_resources)
+
+    def draw_new_hand(self):
+        return
+
+    def take_turn(self):
+        # reveal house hagal card
+        # if space is occupied, repeat until reveal an unoccupied space
+        # if its a combat space, deploy troops to the conflict
+        return
