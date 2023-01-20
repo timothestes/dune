@@ -4,6 +4,8 @@ from src.game.pieces.resources.manager import ResourceManager
 from src.game.players.influence_manager import InfluenceManager
 from src.game.board.locations.garrison import Garrison
 from src.game.leaders.leader import Leader
+from src.game.pieces.agents.agent import Agent
+from typing import List
 
 
 class Player:
@@ -23,6 +25,10 @@ class Player:
         self.resources = self._get_starting_resources()
         self.influence = self._get_starting_influence()
         self.garrison = self._get_starting_garrison()
+        self.agents = self._get_starting_agents()
+
+    def _get_starting_agents(self) -> List[Agent]:
+        return [Agent(color=self.color), Agent(color=self.color)]
 
     def _get_starting_garrison(self) -> Garrison:
         return Garrison(color=self.color, n_troops_in_garrison=3)
