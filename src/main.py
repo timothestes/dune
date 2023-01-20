@@ -11,4 +11,4 @@ if __name__ == "__main__":
     )
 
     for player in game.players:
-        print(player.agents[1].color)
+        print(player)

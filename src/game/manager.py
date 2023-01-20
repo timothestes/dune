@@ -31,6 +31,7 @@ class Game:
         self.colors = ["red", "blue", "green", "yellow"]
         self.n_human_players = n_human_players
         self.n_house_hagal_players = n_house_hagal_players
+        self.turns_until_swordmaster = self._get_turns_until_swordmaster()
         self.players: List[Player] = []
         self.first_player = None
         self.state = "initializing"
@@ -162,6 +163,14 @@ class Game:
             for i in range(n_human_players)
         ]
 
+    def _get_turns_until_swordmaster(self) -> int:
+        if self.difficulty == "novice":
+            return 5
+        elif self.difficulty == "veteran":
+            return 4
+        elif self.difficulty == "expert":
+            return 3
+
     def _get_house_hagal_players(
         self,
         n_human_players: int,
@@ -177,6 +186,7 @@ class Game:
                 color=self.colors[n_human_players + i],
                 player_id=n_human_players + i,
                 leader=playable_leaders[i],
+                turns_until_swordmaster=self.turns_until_swordmaster,
             )
             for i in range(n_house_hagal_players)
         ]
