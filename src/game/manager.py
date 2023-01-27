@@ -8,6 +8,7 @@ from src.game.players.house_hagal import HouseHagalPlayer
 from src.game.players.human import HumanPlayer
 from src.game.players.player import Player
 from src.game.rounds.round_manager import RoundManager
+from src.game.cards.decks.combat import CombatDeck
 
 
 class Game:
@@ -24,6 +25,7 @@ class Game:
     ):
         """
         Initialize the game with the number of human and house_hagal players.
+        board_type: base | rise_of_ix
         """
         self.difficulty = difficulty
         self.board_type = board_type
@@ -43,24 +45,32 @@ class Game:
         self.state = "started"
         self.turn_order = self._get_turn_order()
         self.first_player = self.turn_order[0]
+        self.combat_deck = self._get_combat_deck()
 
-    def start_round(self) -> None:
+    def start_new_round(self) -> None:
         """
         Start a new round.
         """
         self._round = RoundManager(
             board=self.board,
+            combat_deck=self.combat_deck,
             first_player=self.first_player,
             turn_order=self.turn_order,
         )
-        self._round.start_round()
-        self._round.take_player_turns()
-        self._round.resolve_combat()
-        self._round.update_makers()
-        self._round.recall_phase()
-        self.first_player = self._get_next_first_player(
-            current_first_player=self.first_player
-        )
+        self._round.start_new_round()
+        # self._round.take_player_turns()
+        # self._round.resolve_combat()
+        # self._round.update_makers()
+        # self._round.recall_phase()
+        # self.first_player = self._get_next_first_player(
+        # current_first_player=self.first_player
+        # )
+
+    def _get_combat_deck(self) -> CombatDeck:
+        """
+        Return the combat deck.
+        """
+        return CombatDeck(self.board_type)
 
     def _get_next_first_player(self, current_first_player: Player) -> Player:
         """Get the next first player in the turn order."""

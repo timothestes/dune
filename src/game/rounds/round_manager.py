@@ -1,19 +1,26 @@
 from src.game.players.player import Player
 from typing import List
 from src.game.board.board import Board
+from src.game.cards.decks.combat import CombatDeck
 
 
 class RoundManager:
     def __init__(
-        self, board: Board, first_player: Player, turn_order: List[Player]
+        self,
+        board: Board,
+        combat_deck: CombatDeck,
+        first_player: Player,
+        turn_order: List[Player],
     ):
         self.board = board
+        self.combat_deck = combat_deck
         self.first_player = first_player
         self.turn_order = turn_order
 
-    def start_round(self) -> None:
+    def start_new_round(self) -> None:
         # reveal a new conflict card
-        # TODO
+        self.current_combat = self.combat_deck.draw_card()
+        print(self.current_combat.name_friendly)
 
         # each player draws a hand of five cards
         for player in self.turn_order:
