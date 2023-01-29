@@ -1,11 +1,11 @@
 import uuid
+from typing import List
 
-from src.game.pieces.resources.manager import ResourceManager
-from src.game.players.influence_manager import InfluenceManager
 from src.game.board.locations.garrison import Garrison
 from src.game.leaders.leader import Leader
 from src.game.pieces.agents.agent import Agent
-from typing import List
+from src.game.pieces.resources.manager import ResourceManager
+from src.game.players.influence_manager import InfluenceManager
 
 
 class Player:
